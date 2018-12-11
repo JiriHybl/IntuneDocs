@@ -335,6 +335,9 @@ In this step, you:
     > The user account must be assigned a valid Intune license. If the user account does not have a valid Intune license, then NDESConnectorUI.exe fails.
 
     If your organization uses a proxy server and the proxy is needed for the NDES server to access the Internet, select **Use proxy server**. Then enter the proxy server name, port, and account credentials to connect.
+    
+    > [!IMPORTANT]
+    > The proxy server configured in the Certificate Connector UI is only used for the initial registration. To configure the proxy server for ongoing connector operation modify the machine.config file. Use the same configuration as described in the [Azure AD Connect documentation](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-prerequisites#connectivity).
 
     Select the **Advanced** tab, and then enter credentials for an account that has the **Issue and Manage Certificates** permission on your issuing Certificate Authority. **Apply** your changes.
 
